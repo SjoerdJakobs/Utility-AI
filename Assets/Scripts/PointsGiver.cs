@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class PointsGiver : MonoBehaviour {
 
-    private List<float> parameters = new List<float>(); 
+    /*private List<float> parameters = new List<float>(); 
 	
     public PointType pointType = new PointType();
 
@@ -26,6 +26,6 @@ public class PointsGiver : MonoBehaviour {
     {
 
     }
-
+    */
     
 }
