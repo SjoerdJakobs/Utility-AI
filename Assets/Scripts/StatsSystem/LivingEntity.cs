@@ -6,6 +6,13 @@ public class LivingEntity : MonoBehaviour , IAmLiving
     [SerializeField]
     protected Stats entityStats = new Stats();
 
+    [SerializeField]
+    protected Points entityPoints = new Points();
+
+    [SerializeField]
+    protected Behaviour entityBehaviour = new Behaviour();
+
+
     protected bool dead;
 
     public event System.Action OnDeath;
@@ -28,6 +35,11 @@ public class LivingEntity : MonoBehaviour , IAmLiving
     {
 
     }
+
+    public void ReturnStats(Stats stats)
+    {
+        stats = entityStats;
+    }
     #endregion
 }
 
@@ -46,6 +58,24 @@ public class Stats
     public float moveMentspeed = 1;
     public float sizeMod = 1;
     public float hunger = 10;
+}
+
+[System.Serializable]
+public class Points
+{
+    public float scaredPoints = 0;
+    public float hungerPoints = 0;
+    public float staminaPoints =0;
+
+}
+
+[System.Serializable]
+public class Behaviour
+{
+    public float aggresion = 1;
+    public float carOmniHerbi = 0;
+    public float brave = 1;
+    public float lazyness = 1;
 }
 
 #endregion
